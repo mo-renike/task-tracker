@@ -1,3 +1,5 @@
+import React from 'react'
+
 const tasks = [
     {
         id: 1,
@@ -23,7 +25,11 @@ const tasks = [
 const Tasks = () => {
     return (
         <>
-            {tasks.map((task) => (<h3>{task.text}</h3>))}
+            {
+            tasks.map((task) => (
+            <h3 key={task.id}>{task.Text}</h3>
+            ))
+            }
         </>
     )
 }
