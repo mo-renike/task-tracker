@@ -1,37 +1,15 @@
-import React from 'react'
+import React from "react";
+import Task from './Task'
 
-const tasks = [
-    {
-        id: 1,
-        Text: 'Doctors Apointment',
-        day: 'Jul 12th at 2:30pm',
-        reminder: true,
-    },
-    {
-        id: 2,
-        Text: 'Tailors Apointment',
-        day: 'Jul 12th at 5:30pm',
-        reminder: true,
-    },
-    {
-        id: 1,
-        Text: 'Band rehearsals',
-        day: 'Mar 22th at 12:30am',
-        reminder: false,
-    },
-]
+const Tasks = ({ tasks }) => {
 
+  return (
+    <>
+      {tasks.map((task) => (
+        <Task key={task.id} task={task} />
+      ))}
+    </>
+  );
+};
 
-const Tasks = () => {
-    return (
-        <>
-            {
-            tasks.map((task) => (
-            <h3 key={task.id}>{task.Text}</h3>
-            ))
-            }
-        </>
-    )
-}
-
-export default Tasks
+export default Tasks;
