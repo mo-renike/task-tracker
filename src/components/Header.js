@@ -12,7 +12,7 @@ const Header = ({ title }) => {
       <Button color="green" text="Add" onClick={onClick} />
     </header>
   );
-};
+};  
 
 Header.defaultProps = {
   title: "Task Tracker",
