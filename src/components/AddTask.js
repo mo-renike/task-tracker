@@ -51,6 +51,7 @@ const AddTask = (onAdd) => {
         type="submit"
         value="Save Task"
         className="btn btn-block"
+        // eslint-disable-next-line react/jsx-no-duplicate-props
         value= {reminder}
         onChange={(e) => {
           setText(e.currentTarget.checked);
